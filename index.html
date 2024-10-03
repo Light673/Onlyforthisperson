@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #FFDEE9, #B5FFFC);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #happyMessage {
+            display: none;
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #E64A19;
+        }
+
+        /* Add some animated elements */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            animation: move 7s infinite;
+            opacity: 0.7;
+        }
+
+        .bubble1 {
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: 10%;
+        }
+
+        .bubble2 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 10%;
+        }
+
+        .bubble3 {
+            width: 120px;
+            height: 120px;
+            bottom: 10%;
+            left: 30%;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Please click this button</h1>
+        <button class="btn" onclick="showMessage()">Click me</button>
+        <div id="happyMessage">Happy Teacher's Day!</div>
+        
+        <!-- Moving bubbles for design -->
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble2"></div>
+        <div class="bubble bubble3"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.querySelector('.btn').style.display = 'none';
+            document.querySelector('h1').style.display = 'none';
+            document.getElementById('happyMessage').style.display = 'block';
+        }
+    </script>
+
+
+</body></html>
